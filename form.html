@@ -1,0 +1,116 @@
+<html>
+<head><title>Place Your Order Here.....</title>
+<script type="text/javascript">
+function validation()
+{
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (reg.test(frm.email.value) == false) 
+        {
+            alert('Invalid Email Address');
+			return false;
+        }
+
+
+for(i=0;i<7;i++)
+{
+if(document.forms[0].elements[i].value=="")
+{
+alert("PLEASE FILL ALL THE FIELDS");
+			return false;
+}
+}
+
+   if(isNaN(frm.units.value)==true)
+   {
+   alert("enter units in whole no.");
+   return false;
+   }
+if(((frm.mob.value).length!=10)||(isNaN(frm.mob.value)==true))
+   {
+   alert("Enter valid mobile no.");
+   return false;
+   }
+    if(isNaN(frm.pinc.value)==true)
+   {
+   alert("enter pincode in nos.");
+   return false;
+   }
+}
+</script>
+</head>
+<body text=red   vlink="red" alink="maroon" link="brown"   bgcolor="aqua">
+<form onsubmit="return validation()" action="data.php" method="post" name="frm">
+<center>
+<table width="80%">
+<tr align="center">
+<td><h1><h1>
+Fullname :</h1></td><td><h1>
+<input type=text 
+name="custname"></h1></td>
+<tr align="center">
+<td><h1>Mobile No. :</h1></td><td><h1>
+<input type=text name="mob" maxlength="10"></h1></td>
+</tr>
+<tr align="center">
+<td><h1>Address :</h1></td><td><h1>
+<textarea cols=30 rows=5 name="add"></textarea></h1></td>
+</tr>
+<tr align="center">
+<td><h1>*Pincode : </h1></td><td><h1>
+<input type=text name="pinc"></h1></td>
+</tr>
+<tr align="center">
+<td><h1>*Item_code : </h1></td><td><h1>
+<select name="code">
+<option value=SN01>SN01</option>
+<option value=SN02>SN02</option>
+<option value=SN03>SN03</option>
+<option value=SN04>SN04</option>
+<option value=SN05>SN05</option>
+<option value=SN06>SN06</option>
+<option value=SN07>SN07</option>
+<option value=SN08>SN08</option>
+<option value=SN09>SN09</option>
+<option value=FT01>FT01</option>
+<option value=FT02>FT02</option>
+<option value=FT03>FT03</option>
+<option value=FT04>FT04</option>
+<option value=FT05>FT05</option>
+<option value=FT06>FT06</option>
+<option value=FT07>FT07</option>
+<option value=FT08>FT08</option>
+<option value=TI01>TI01</option>
+<option value=TI02>TI02</option>
+<option value=TI03>TI03</option>
+<option value=TI04>TI04</option>
+<option value=TI05>TI05</option>
+<option value=TI06>TI06</option>
+<option value=TI07>TI07</option>
+<option value=TI08>TI08</option>
+<option value=WM01>WM01</option>
+<option value=WM02>WM02</option>
+<option value=WM03>WM03</option>
+<option value=WM04>WM04</option>
+<option value=WM05>WM05</option>
+<option value=WM06>WM06</option>
+<option value=WM07>WM07</option>
+<option value=WM08>WM08</option>
+</select>
+</h1></td>
+</tr>
+<tr align="center">
+<td><h1>E-mail:-</h1></td><td><h1><input type="text" name="email"></h1></td>
+</tr>
+<tr align="center">
+<td><h1>No. Of Items:-</h1></td><td><h1><input type="text" name="units"></h1></td>
+</tr>
+<tr align="center">
+<td colspan=2><input type="submit" name="btn" value="Place Order"></h1></td>
+</tr></h1>
+</table></center>
+</form>
+<a href=formde.html>CLICK HERE TO REMOVE AN ORDER</a><br/><br/>
+<a href=get.html>CLICK HERE TO GET DETAILS OF YOUR ORDER</a><br/><br/>
+<a href=update.html>CLICK HERE TO CHANGE DETAILS OF YOUR ORDER</a>
+</body>
+</html>
